@@ -4,370 +4,62 @@
 
 {% block content %}
 
-<!-- Futuristic Hero Section -->
-<div class="hero min-h-[60vh] bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-    <div class="hero-content text-center">
-        <div class="max-w-md">
-            <h1 class="mb-5 text-5xl font-bold" style="letter-spacing: 1.2px;">Welcome to ChazeFashion</h1>
-            <p class="mb-5 text-lg font-light">Explore the future of fashion. Discover cutting-edge styles and express your individuality.</p>
-            <a href="{% url 'product_list' %}" class="btn btn-primary bg-blue-600 hover:bg-blue-700 border-none">Shop Now</a>
+<!-- Hero Section -->
+<div class="hero min-h-[70vh] bg-gradient-to-r from-gray-900 via-purple-900 to-black text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent)]"></div>
+    <div class="hero-content text-center z-10 relative">
+        <div class="max-w-2xl mx-auto px-4">
+            <h1 class="mb-5 text-5xl md:text-6xl font-extrabold tracking-wide leading-tight drop-shadow-lg">
+                Discover the Future of Fashion
+            </h1>
+            <p class="mb-6 text-lg md:text-xl font-light text-gray-300 leading-relaxed">
+                Dive into bold trends, futuristic styles, and curated collections. Your fashion journey starts here.
+            </p>
+            <a href="{% url 'product_list' %}" class="inline-block px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold rounded-xl transition duration-300 shadow-md">
+                Shop Now
+            </a>
         </div>
     </div>
 </div>
 
-<!-- Categories Section -->
-<div class="py-16 bg-base-200">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">Shop by Category</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-10 pt-10">
+<!-- Category Section -->
+<section class="py-20 bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-14 text-gray-800 dark:text-white">Explore Categories</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
 
-
-                            <img src="https://cdn-icons-png.flaticon.com/128/2920/2920658.png"  class="rounded-xl h-16 w-16 object-cover"/>
-                        </div>
-
-                   
-                </figure>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Men</h2>
-                    <p class="text-sm">Stylish clothing for men</p>
-                    <div class="card-actions">
-                        <a href="{% url 'product_list' %}?category=Men" class="btn btn-primary btn-sm">Shop Men</a>
-                    </div>
-                </div>
-</div>
-            
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-10 pt-10">
-
-                            <img src="https://cdn-icons-png.flaticon.com/128/4494/4494750.png" class="rounded-xl h-24 w-24 object-cover"/>
-                        </div>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Women</h2>
-                    <p class="text-sm">Elegant fashion for women</p>
-                    <div class="card-actions">
-                        <a href="{% url 'product_list' %}?category=Women" class="btn btn-secondary btn-sm">Shop Women</a>
-                    </div>
-                </div>
+            <!-- Men -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1593032465171-8f265ae8cf1e?w=200&h=200&fit=crop" alt="Men" class="mx-auto mb-4 w-20 h-20 rounded-full object-cover">
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-white">Men</h3>
             </div>
-            
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-10 pt-10">
 
-                            <img src="https://cdn-icons-png.flaticon.com/128/3041/3041304.png"class="rounded-xl h-24 w-24 object-cover" />
-                        </div>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Boys</h2>
-                    <p class="text-sm">Cool clothes for boys</p>
-                    <div class="card-actions">
-                        <a href="{% url 'product_list' %}?category=Boys" class="btn btn-accent btn-sm">Shop Boys</a>
-                    </div>
-                </div>
+            <!-- Women -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1618354691214-752a234aac5f?w=200&h=200&fit=crop" alt="Women" class="mx-auto mb-4 w-20 h-20 rounded-full object-cover">
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-white">Women</h3>
             </div>
-            
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-10 pt-10">
 
-                            <img src="https://cdn-icons-png.flaticon.com/128/471/471855.png" class="rounded-xl h-24 w-24 object-cover"/>
-                        </div>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Girls</h2>
-                    <p class="text-sm">Pretty dresses for girls</p>
-                    <div class="card-actions">
-                        <a href="{% url 'product_list' %}?category=Girls" class="btn btn-info btn-sm">Shop Girls</a>
-                    </div>
-                </div>
+            <!-- Accessories -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a2b8?w=200&h=200&fit=crop" alt="Accessories" class="mx-auto mb-4 w-20 h-20 rounded-full object-cover">
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-white">Accessories</h3>
             </div>
-            
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-10 pt-10">
 
-                            <img src="https://cdn-icons-png.flaticon.com/128/3923/3923735.png" class="rounded-xl h-24 w-24 object-cover" />
-                        </div>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Toddler</h2>
-                    <p class="text-sm">Comfortable baby clothes</p>
-                    <div class="card-actions">
-                        <a href="{% url 'product_list' %}?category=Toddler" class="btn btn-success btn-sm">Shop Toddler</a>
-                    </div>
-                </div>
+            <!-- Shoes -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1603808033192-082d691b8ad3?w=200&h=200&fit=crop" alt="Shoes" class="mx-auto mb-4 w-20 h-20 rounded-full object-cover">
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-white">Shoes</h3>
             </div>
+
+            <!-- Sale -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-4 text-center shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop" alt="Sale" class="mx-auto mb-4 w-20 h-20 rounded-full object-cover">
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-white">Sale</h3>
+            </div>
+
         </div>
     </div>
-</div>
+</section>
 
-
-
-
-
-<!-- Featured Products Section -->
-<div class="py-16">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {% for product in products %}
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-4 pt-4">
-                    {% if product.pr_images %}
-                        <img src="{{ product.pr_images.url }}" alt="{{ product.pr_name }}" class="rounded-xl h-48 w-full object-cover" />
-                    {% else %}
-                        <div class="bg-base-300 rounded-xl h-48 w-full flex items-center justify-center">
-                            <i class="fas fa-tshirt text-6xl text-base-content opacity-50"></i>
-                        </div>
-                    {% endif %}
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">{{ product.pr_name }}</h2>
-                    <p class="text-sm text-base-content opacity-70">{{ product.pr_cate }}</p>
-                    <div class="flex items-center justify-between ">
-                        <div class="text-2xl font-bold text-primary">${{ product.pr_price }}</div>
-                        <div class="rating rating-sm">
-                            {% for i in "12345" %}
-                                {% if forloop.counter <= product.pr_reviews %}
-                                    <input type="radio" name="rating-{{ product.pr_id }}" class="mask mask-star-2 bg-orange-400" checked disabled />
-                                {% else %}
-                                    <input type="radio" name="rating-{{ product.pr_id }}" class="mask mask-star-2 bg-orange-400" disabled />
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <div class="card-actions justify-end">
-                        <a href="{% url 'product_detail' product.pr_id %}" class="btn btn-primary btn-sm">View Details</a>
-
-                        {% if user.is_authenticated %}
-
-
-                                <i class="fas fa-shopping-cart"></i>
-
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-            {% empty %}
-            <div class="col-span-full text-center py-12">
-                <div class="text-6xl mb-4">👕</div>
-                <h3 class="text-xl font-semibold mb-2">No products available</h3>
-                <p class="text-base-content opacity-70">Check back soon for new arrivals!</p>
-            </div>
-            {% endfor %}
-        </div>
-        
-        {% if products %}
-        <div class="text-center mt-8">
-            <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg">View All Products</a>
-        </div>
-        {% endif %}
-    </div>
-</div>
-
-<!-- Features Section -->
-<div class="py-16 bg-base-200">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">Why Choose ChazeFashion?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="text-center">
-                <div class="text-4xl mb-4">🚚</div>
-                <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
-                <p class="text-base-content opacity-70">Get your fashion items delivered to your doorstep quickly and safely.</p>
-            </div>
-            <div class="text-center">
-                <div class="text-4xl mb-4">💎</div>
-                <h3 class="text-xl font-semibold mb-2">Quality Products</h3>
-                <p class="text-base-content opacity-70">We offer only the highest quality clothing and accessories.</p>
-            </div>
-            <div class="text-center">
-                <div class="text-4xl mb-4">🛡️</div>
-                <h3 class="text-xl font-semibold mb-2">Secure Shopping</h3>
-                <p class="text-base-content opacity-70">Your security is our priority with safe and secure payment options.</p>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock %} {% extends 'base.html' %}
-
-{% block title %}ChazeFashion - Home{% endblock %}
-
-{% block content %}
-
-<!-- Futuristic Hero Section -->
-<div class="hero min-h-[60vh] bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-    <div class="hero-content text-center">
-        <div class="max-w-md">
-            <h1 class="mb-5 text-5xl font-bold" style="letter-spacing: 1.2px;">Welcome to ChazeFashion</h1>
-            <p class="mb-5 text-lg font-light">Explore the future of fashion. Discover cutting-edge styles and express your individuality.</p>
-            <a href="{% url 'product_list' %}" class="btn btn-primary bg-blue-600 hover:bg-blue-700 border-none">Shop Now</a>
-        </div>
-    </div>
-</div>
-
-<!-- Categories Section -->
-<div class="py-16 bg-base-200">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">Shop by Category</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-10 pt-10">
-
-
-                            <img src="https://cdn-icons-png.flaticon.com/128/2920/2920658.png"  class="rounded-xl h-16 w-16 object-cover"/>
-                        </div>
-
-                   
-                </figure>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Men</h2>
-                    <p class="text-sm">Stylish clothing for men</p>
-                    <div class="card-actions">
-                        <a href="{% url 'product_list' %}?category=Men" class="btn btn-primary btn-sm">Shop Men</a>
-                    </div>
-                </div>
-</div>
-            
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-10 pt-10">
-
-                            <img src="https://cdn-icons-png.flaticon.com/128/4494/4494750.png" class="rounded-xl h-24 w-24 object-cover"/>
-                        </div>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Women</h2>
-                    <p class="text-sm">Elegant fashion for women</p>
-                    <div class="card-actions">
-                        <a href="{% url 'product_list' %}?category=Women" class="btn btn-secondary btn-sm">Shop Women</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-10 pt-10">
-
-                            <img src="https://cdn-icons-png.flaticon.com/128/3041/3041304.png"class="rounded-xl h-24 w-24 object-cover" />
-                        </div>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Boys</h2>
-                    <p class="text-sm">Cool clothes for boys</p>
-                    <div class="card-actions">
-                        <a href="{% url 'product_list' %}?category=Boys" class="btn btn-accent btn-sm">Shop Boys</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-10 pt-10">
-
-                            <img src="https://cdn-icons-png.flaticon.com/128/471/471855.png" class="rounded-xl h-24 w-24 object-cover"/>
-                        </div>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Girls</h2>
-                    <p class="text-sm">Pretty dresses for girls</p>
-                    <div class="card-actions">
-                        <a href="{% url 'product_list' %}?category=Girls" class="btn btn-info btn-sm">Shop Girls</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-10 pt-10">
-
-                            <img src="https://cdn-icons-png.flaticon.com/128/3923/3923735.png" class="rounded-xl h-24 w-24 object-cover" />
-                        </div>
-                <div class="card-body items-center text-center">
-                    <h2 class="card-title">Toddler</h2>
-                    <p class="text-sm">Comfortable baby clothes</p>
-                    <div class="card-actions">
-                        <a href="{% url 'product_list' %}?category=Toddler" class="btn btn-success btn-sm">Shop Toddler</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-<!-- Featured Products Section -->
-<div class="py-16">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {% for product in products %}
-            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-                <figure class="px-4 pt-4">
-                    {% if product.pr_images %}
-                        <img src="{{ product.pr_images.url }}" alt="{{ product.pr_name }}" class="rounded-xl h-48 w-full object-cover" />
-                    {% else %}
-                        <div class="bg-base-300 rounded-xl h-48 w-full flex items-center justify-center">
-                            <i class="fas fa-tshirt text-6xl text-base-content opacity-50"></i>
-                        </div>
-                    {% endif %}
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">{{ product.pr_name }}</h2>
-                    <p class="text-sm text-base-content opacity-70">{{ product.pr_cate }}</p>
-                    <div class="flex items-center justify-between ">
-                        <div class="text-2xl font-bold text-primary">${{ product.pr_price }}</div>
-                        <div class="rating rating-sm">
-                            {% for i in "12345" %}
-                                {% if forloop.counter <= product.pr_reviews %}
-                                    <input type="radio" name="rating-{{ product.pr_id }}" class="mask mask-star-2 bg-orange-400" checked disabled />
-                                {% else %}
-                                    <input type="radio" name="rating-{{ product.pr_id }}" class="mask mask-star-2 bg-orange-400" disabled />
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <div class="card-actions justify-end">
-                        <a href="{% url 'product_detail' product.pr_id %}" class="btn btn-primary btn-sm">View Details</a>
-
-                        {% if user.is_authenticated %}
-
-
-                                <i class="fas fa-shopping-cart"></i>
-
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-            {% empty %}
-            <div class="col-span-full text-center py-12">
-                <div class="text-6xl mb-4">👕</div>
-                <h3 class="text-xl font-semibold mb-2">No products available</h3>
-                <p class="text-base-content opacity-70">Check back soon for new arrivals!</p>
-            </div>
-            {% endfor %}
-        </div>
-        
-        {% if products %}
-        <div class="text-center mt-8">
-            <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg">View All Products</a>
-        </div>
-        {% endif %}
-    </div>
-</div>
-
-<!-- Features Section -->
-<div class="py-16 bg-base-200">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">Why Choose ChazeFashion?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="text-center">
-                <div class="text-4xl mb-4">🚚</div>
-                <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
-                <p class="text-base-content opacity-70">Get your fashion items delivered to your doorstep quickly and safely.</p>
-            </div>
-            <div class="text-center">
-                <div class="text-4xl mb-4">💎</div>
-                <h3 class="text-xl font-semibold mb-2">Quality Products</h3>
-                <p class="text-base-content opacity-70">We offer only the highest quality clothing and accessories.</p>
-            </div>
-            <div class="text-center">
-                <div class="text-4xl mb-4">🛡️</div>
-                <h3 class="text-xl font-semibold mb-2">Secure Shopping</h3>
-                <p class="text-base-content opacity-70">Your security is our priority with safe and secure payment options.</p>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock %} 
+{% endblock %}
